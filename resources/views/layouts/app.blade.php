@@ -1,18 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Laravel</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script src="{{ asset('js/app.js') }}"></script>
+        @include('layouts.head')
     </head>
     <body>
-        <header>
-            <h1>Laravel</h1>
-        </header>
-        <main>
-            @yield('content')
-        </main>
-        <footer>
-            <p>Laravel</p>
-        </footer>
+        <div class="wrapper">
+            <div class="main-header">
+                @include('layouts.navbar')
+            </div>
+            @include('layouts.sidebar')
+            <div class="main-panel">
+                @yield('content')
+                @include('layouts.footer')
+            </div>
+        </div>
     </body>
 </html>
