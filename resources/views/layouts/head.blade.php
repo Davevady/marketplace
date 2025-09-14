@@ -27,9 +27,17 @@
     </script>
 
 <!-- CSS Files -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
 <link rel="stylesheet" href="{{ asset('assets/css/atlantis.min.css') }}" />
 
-<!-- CSS Just for demo purpose, don't include it in your project -->
-{{-- <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" /> --}}
-
+<style>
+    .is-active-true {
+        background-color: #9cff9c !important;
+        /* cursor: not-allowed; */
+    }
+    .is-active-false {
+        background-color: #ff9c9c ;
+        /* cursor: not-allowed; */
+    }
+</style>

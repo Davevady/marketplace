@@ -12,6 +12,7 @@
             <div class="main-panel">
                 @yield('content')
                 @include('layouts.footer')
+                @include('layouts.script')
             </div>
         </div>
     </body>

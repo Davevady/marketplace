@@ -24,4 +24,5 @@
 <link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
 
 <!-- Main CSS File -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link href="assets/css/main.css" rel="stylesheet">

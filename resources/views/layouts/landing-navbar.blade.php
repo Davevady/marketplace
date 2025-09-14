@@ -124,8 +124,8 @@
                             </a>
                         </div>
                         <div class="dropdown-footer">
-                            <a href="register.html" class="btn btn-primary w-100 mb-2">Sign In</a>
-                            <a href="login.html" class="btn btn-outline-primary w-100">Register</a>
+                            <a href="{{ route('admin.index') }}" class="btn btn-primary w-100 mb-2">Sign In</a>
+                            <a href="#" class="btn btn-outline-primary w-100">Register</a>
                         </div>
                     </div>
                 </div>
