@@ -15,12 +15,15 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('sku')->unique();
             $table->string('image')->nullable();
             $table->string('description')->nullable();
             $table->decimal('price', 10, 2);
+            $table->integer('stock')->default(0);
+            $table->integer('min_stock')->default(5);
             $table->boolean('is_active')->default(true);
             $table->foreignId('category_id')->constrained('categories');
+            $table->foreignId('unit_id')->constrained('units');
             $table->timestamps();
             $table->softDeletes();
         });
