@@ -37,12 +37,34 @@
                 </div>
             </div>
             <ul class="nav nav-primary">
-                <li class="nav-item {{ request()->is('~admin') ? 'active' : '' }}">
-                    <a href="{{ route('admin.index') }}">
+                <li class="nav-item {{ request()->is('~admin*') ? 'active submenu' : '' }}">
+                    <a data-toggle="collapse" href="#dashboardMenu" aria-expanded="false" class="collapsed">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
+                        <span class="caret"></span>
                     </a>
+                    <div class="collapse {{ request()->is('~admin*') ? 'show' : '' }}"
+                        id="dashboardMenu">
+                        <ul class="nav nav-collapse">
+                            <li class="{{ request()->is('~admin*') ? 'active' : '' }}">
+                                <a href="{{ route('admin.index') }}">
+                                    <span class="sub-item">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="{{ request()->is('admin/transactions*') ? 'active' : '' }}">
+                                <a href="{{ route('admin.transaction') }}">
+                                    <span class="sub-item">Transaction</span>
+                                </a>
+                            </li>
+                            <li class="{{ request()->is('admin/reports*') ? 'active' : '' }}">
+                                <a href="/">
+                                    <span class="sub-item">Reports</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
+
                 <li class="nav-section">
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>
@@ -110,8 +132,15 @@
                         </ul>
                     </div>
                 </li>
+
+                {{-- Menu di luar dropdown --}}
+                <li class="nav-item {{ request()->is('admin/products*') ? 'active' : '' }}">
+                    <a href="/">
+                        <i class="fas fa-box"></i>
+                        <p>Kelola Produk</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </div>
-
