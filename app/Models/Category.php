@@ -11,7 +11,7 @@ class Category extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['name', 'slug', 'image', 'description', 'is_active'];
+    protected $guarded = ['id'];
 
     public function products()
     {
